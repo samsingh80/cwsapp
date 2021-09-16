@@ -1,0 +1,45 @@
+.header {
+    margin-top: 2%;
+	width: 100% !important;
+    height: 50% !important;
+     
+}
+
+.f1{
+
+Width:35%;
+align-items: center !important;
+
+}
+
+.f12 .sapMFlexItem{
+    
+    width:125%;
+}
+
+.f2{
+Width:35%;
+align-items: center;
+}
+
+.f3{
+Width:15%;
+align-items: center;
+}
+
+.f4{
+Width:15%;
+align-items: center;
+}
+
+.f5{
+Width:25%;
+align-items: center;
+}
+
+.custname {
+
+    width: 100%;
+
+}
+
