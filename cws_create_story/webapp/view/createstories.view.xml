@@ -2,217 +2,77 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
     xmlns:u="sap.ui.unified"
-    xmlns:f="sap.f">
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
     <Shell id="shell">
         <App id="app">
             <pages>
                 <Page id="page" showHeader = "false">
                     <content>
 
-
-                        <FlexBox direction = "Column">
-                            <FlexBox  height = "10%">
-                                <Image src="{imageModel>/path}/images/image001.png" class="header"/>
-                            </FlexBox>
-                            <FlexBox  justifyContent = "SpaceAround">
-                                <FlexBox justifyContent = "SpaceAround" class = "f1">
-                                    <Label text="Customer Name" labelFor="custname" align="center" />
-                                    <FlexBox width="70%" class="f12">
-                                        <Input id="custname"  class = "custname" placeholder="Enter product" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-                                    </FlexBox>
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f2">
-                                    <Label text="Customer Logo" labelFor="fileUploader" align="center" />
-
-                                    <u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
-
-
-                                </FlexBox>
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f3">
-                                    <Label text="Story Type" labelFor="storytype" align="center" />
-                                    <Select id="storytype" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f4">
-                                    <Label text="Year" labelFor="year" align="center" />
-                                    <Select id="year" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                            </FlexBox>
-
-                           <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Quater" labelFor="quater" align="center" />
-                                    <FlexBox width="70%" class="f12">
-                                        <Select id="quater"  class = "quater" placeholder="Enter product" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-                                    </FlexBox>
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Region" labelFor="region" align="center" />
-
-                                    <Select id="region"  class = "quater"  showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-
-                                </FlexBox>
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Market Classification" labelFor="acc" align="center" />
-                                    <Select id="acc" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text= "Industry" labelFor="industry" align="center" />
-                                    <Select id="industry" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                            </FlexBox>
-
-                           <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Industry Segment" labelFor="iseg" align="center" />
-                                    <FlexBox width="70%" class="f12">
-                                        <Input id="iseg"  class = "quater"  showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-                                    </FlexBox>
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="About the customer" labelFor="about" align="center" />
-
-                                    			<TextArea value=" " rows="8" />
-
-
-                                </FlexBox>
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Company Website Link" labelFor="weblink" align="center" />
-                                    <Input id="weblink" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text= "Company HQ" labelFor="comphq" align="center" />
-                                    <Input id="comphq" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                            </FlexBox>
-
-                                                       <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Company Revenue" labelFor="rev" align="center" />
-                                    <FlexBox width="70%" class="f12">
-                                        <Input id="rev"  class = "quater"  showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-                                    </FlexBox>
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Number of Employees" labelFor="noofemp" align="center" />
-
-                                    			<Input id="noofemp"  class = "quater"  showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-
-                                </FlexBox>
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Industry Account Executive" labelFor="exec" align="center" />
-                                    <Input id="exec" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text= "Digital Pillars / Transformation Topics" labelFor="digtopics" align="center" />
-                                    <Input id="digtopics" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-
-                                </FlexBox>
-
-                            </FlexBox>
-
-                                                       <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Deal Highlights" labelFor="deal" align="center" />
-                                   
-                                        <TextArea id ="deal" value=" " rows="8" />
-                                  
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="SAP Solutions" labelFor="sapsol" align="center" />
-
-                                    			<TextArea id ="sapsol" value=" " rows="8" />
-
-
-                                </FlexBox>
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Customer Challenges Objectives" labelFor="obj" align="center" />
-                                   	<TextArea id ="obj" value=" " rows="8" />
-
-                                </FlexBox>
-
-
-                            </FlexBox>
-
-
-                        <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Why the Customer choose SAP" labelFor="whysap" align="center" />                                  
-                                        <TextArea id ="whysap" value=" " rows="8" />                                  
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Engagement Highlights" labelFor="highlights" align="center" />
-                                    <TextArea id ="highlights" value=" " rows="8" />
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Business Value"  labelFor="value" align="center" />
-                                   	<TextArea id ="value" value=" " rows="8" />
-                                </FlexBox>
-
-                            </FlexBox>
-
-                        <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Partners" labelFor="partner" align="center" />                                  
-                                        <TextArea id ="partner" value=" " rows="8" />                                  
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Competitors" labelFor="Competitors" align="center" />
-                                    <TextArea id ="Competitors" value=" " rows="8" />
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" alignContent = "Center" class = "f5">
-                                    <Label text="Customer Quotes"  labelFor="custquotes" align="center" />
-                                   	<TextArea id ="custquotes" value=" " rows="8" />
-                                </FlexBox>
-
-                            </FlexBox>      
-
-
-                      <FlexBox  justifyContent = "SpaceAround" >
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Internal Assets" labelFor="asset" align="center" />                                  
-                                        <TextArea id ="asset" value=" " rows="8" />                                  
-                                </FlexBox>
-
-                                <FlexBox justifyContent = "SpaceAround" class = "f5">
-                                    <Label text="Visibility" labelFor="visibility" align="center" />
-                                    <Input id="visibility" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"/>
-                                </FlexBox>
-
-
-
-                            </FlexBox> 
-                                                  
-
+                        <FlexBox direction="Column">
+                            <Image src="{imageModel>/path}/images/image001.png" class="header"/>
                         </FlexBox>
-
+                        <f:SimpleForm id="SimpleForm" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="6">
+                            <f:content>
+                                <Label text="Customer Name" labelFor="custname"  />
+                                <Input id="custname" placeholder="Enter product" />
+                                <Label text="Customer Logo" labelFor="fileUploader"  />
+                                <u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+                                <Label text="Story Type" labelFor="storytype" />
+                                <Select id="storytype" />
+                                <Label text="Year" labelFor="year"  />
+                                <Select id="year" />
+                                <Label text="Quater" labelFor="quater"  />
+                                <Select id="quater"/>
+                                <Label text="Region" labelFor="region"  />
+                                <Select id="region" />
+                                <Label text="Market Classification" labelFor="acc"  />
+                                <Select id="acc" />
+                                <Label text= "Industry" labelFor="industry" />
+                                <Select id="industry" />
+                                <Label text="Industry Segment" labelFor="iseg"  />
+                                <Input id="iseg" />
+                                <Label text="About the customer" labelFor="about"  />
+                                <TextArea value=" " rows="5"/>
+                                <Label text="Company Website Link" labelFor="weblink"  />
+                                <Input id="weblink"/>
+                                <Label text= "Company HQ" labelFor="comphq"  />
+                                <Input id="comphq" />
+                                <Label text="Company Revenue" labelFor="rev"/>
+                                <Input id="rev" />
+                                <Label text="Number of Employees" labelFor="noofemp" />
+                                <Input id="noofemp"/>
+                                <Label text="Industry Account Executive" labelFor="exec" />
+                                <Input id="exec"/>
+                                <Label text= "Digital Pillars / Transformation Topics" labelFor="digtopics"/>
+                                <Input id="digtopics"/>
+                                <Label text="Deal Highlights" labelFor="deal" />
+                                <TextArea id ="deal" value=" " rows="5" />
+                                <Label text="SAP Solutions" labelFor="sapsol" />
+                                <TextArea id ="sapsol" value=" " rows="5" />
+                                <Label text="Customer Challenges Objectives" labelFor="obj" />
+                                <TextArea id ="obj" value=" " rows="5" />
+                                <Label text="Why the Customer choose SAP" labelFor="whysap" />
+                                <TextArea id ="whysap" value=" " rows="5" />
+                                <Label text="Engagement Highlights" labelFor="highlights"/>
+                                <TextArea id ="highlights" value=" " rows="5" />
+                                <Label text="Business Value" labelFor="value" />
+                                <TextArea id ="value" value=" " rows="5" />
+                                <Label text="Partners" labelFor="partner"/>
+                                <TextArea id ="partner" value=" " rows="5" />
+                                <Label text="Competitors" labelFor="Competitors"/>
+                                <TextArea id ="Competitors" value=" " rows="5" />
+                                <Label text="Customer Quotes" labelFor="custquotes" />
+                                <TextArea id ="custquotes" value=" " rows="5" />
+                                <Label text="Internal Assets" labelFor="asset" />
+                                <TextArea id ="asset" value=" " rows="5" />
+                                <Label text="Visibility" labelFor="visibility" />
+                                <Input id="visibility"/>
+                            </f:content>
+                        </f:SimpleForm>
                     </content>
                 </Page>
-
             </pages>
         </App>
     </Shell>
